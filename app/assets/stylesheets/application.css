@@ -15,7 +15,7 @@
  */
 
 
- h1, p {
+ h1,p {
   margin: 40px auto;
   max-width: 650px;
   line-height: 1.6;
@@ -30,9 +30,12 @@ h1 {
   font-size: 30px;
 }
 
-.cards {
-  display: flex;
-  flex:1;
-  flex-direction: row;
-  justify-content: space-between;
+/*.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
 }
+Classe à mettre dans le view : index de home

@@ -11,16 +11,16 @@ PrivateMessage.destroy_all # Remise à 0
   City.create(name: Faker::Address.city, zip_code: Faker::Address.zip_code)
 end
 
-10.times do # Je définis 10 users aléatoirement etje lui affecte une des 10 villes créées
-  User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, description: Faker::Lorem.sentence(word_count: 3, supplemental: true), email: Faker::Internet.email, age: Faker::Number.within(range: 15..50), city: City.all[rand(0..9)])
+10.times do # Je définis 10 users aléatoirement et je lui affecte une des 10 villes créées
+  User.create(first_name: Faker::Superhero.prefix, last_name: Faker::Superhero.suffix, description: Faker::Quote.yoda, email: Faker::Internet.email, age: Faker::Number.within(range: 15..50), city: City.all[rand(0..9)])
 end
 
 20.times do # Création de 20 gossips. Chaque gossip est attribué aléatoirement à un des users (un user peut ne pas avoir de gossip)
-  Gossip.create(title: Faker::Lorem.word, content: Faker::Lorem.sentence, user: User.all[rand(0..9)])
+  Gossip.create(title: Faker::Movies::HarryPotter.spell, content: Faker::Quote.yoda, user: User.all[rand(0..9)])
 end
 
 10.times do # Création de 10 tags aléatoires
-  Tag.create(title: Faker::Lorem.word)
+  Tag.create(title: Faker::Movies::HarryPotter.spell)
 end
 
 Gossip.all.each do |gossip| # Chaque gossip a aléatoirement 2 tags

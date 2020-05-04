@@ -1,15 +1,16 @@
 <body>
 <h1>Bienvenue gros !</h1>
-<p>Voici la magnifique liste des potins (même si tout le monde sen fout) :</p>
-<% Gossip.all.each do |gossip| %>
+<p>Voici la magnifique liste des potins :</p>
+  <% Gossip.all.each do |gossip| %>
       <p>
-      <div class="card bg-light mb-3 mx-auto text-center" style="max-width: 18rem;">
-        <div class="card-header"><%= gossip.user.first_name %></div>
-          <div class="card-body">
-            <h5 class="card-title"><%= gossip.title %> </h5>
-            <p class="card-text"><%= link_to "Lien vers le potin", gossip_id_path(gossip.id) %></p>
+        <div class="card bg-light mb-3 mx-auto text-center" style="max-width: 18rem;">
+          <div class="card-header"><%= gossip.user.first_name %></div>
+            <div class="card-body">
+              <h5 class="card-title"><%= gossip.title %> </h5>
+              <p class="card-text"><%= link_to "Lien vers le potin", gossip_id_path(gossip.id) %></p>
+            </div>
           </div>
-      </div>
+        </div>
       </p>
-    <%end%>
+  <%end%>
 </body>

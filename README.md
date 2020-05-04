@@ -21,6 +21,7 @@ $ rails db:create
 
 $ rails db:migrate
 ```
+(Inutile de faire le seed : il a déjà été fait)
 
 ### Comment l'utiliser ?
 
