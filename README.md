@@ -1,4 +1,4 @@
-# Bienvenue dans ce projet THP : The Gossip Project with Sinatra
+# Bienvenue dans ce projet THP : The Gossip Project
 
 *Projet réalisé par Aurore CARRIERE & Nicolas HODEE- le 04/05/2020*
 
