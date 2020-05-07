@@ -1,6 +1,7 @@
 <body>
 <h1>Bienvenue gros !</h1>
 <p>Voici la magnifique liste des potins :</p>
+<a href="<%= gossips_new_path%>">Nouveau Gossip</a>
   <% Gossip.all.each do |gossip| %>
       <p>
         <div class="card bg-light mb-3 mx-auto text-center" style="max-width: 18rem;">

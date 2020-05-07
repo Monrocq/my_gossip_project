@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/user/:user_id', to: 'user#user_description', as: 'user_description'
   get '/gossips/new', to: 'new#index'
   post '/gossips/create', to: 'new#create'
+  resources :gossip
 end
