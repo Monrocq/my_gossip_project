@@ -1,0 +1,13 @@
+<%= form_tag action: 'create', method: "post" do %>
+
+      <%= label_tag 'Title' %>
+      <%= text_field_tag 'title' %>
+      <br /> <br />
+
+      <%= label_tag 'Content' %>
+      <%= text_area_tag 'content' %>
+      <br /> <br />
+
+      <%= submit_tag "Create Post" %>
+
+    <% end %>

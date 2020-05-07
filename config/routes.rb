@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/', to: 'home#index'
   get '/gossip/:id', to: 'gossip#index', as: 'gossip_id'
   get '/user/:user_id', to: 'user#user_description', as: 'user_description'
+  get '/gossips/new', to: 'new#index'
+  post '/gossips/create', to: 'new#create'
 end
