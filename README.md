@@ -1,13 +1,9 @@
 # Bienvenue dans ce projet THP : The Gossip Project
 
-*Projet réalisé par Aurore CARRIERE & Nicolas HODEE- le 04/05/2020*
+*Base réalisé par Aurore CARRIERE & Nicolas HODEE- le 04/05/2020*
+*Forké par Adel MALIK-MONROCQ suite à la communication de cette correction par le Bot THP*
 
 ***********************
-
-### Exercice :
-
-Petite application qui regroupe les potins de THP.
-
 
 ### Comment lancer l'application ?
 
@@ -27,14 +23,8 @@ $ rails db:migrate
 
 Ouvrir dans le navigateur : http://localhost:3000/
 
-Bienvenue dans cette petite application où on peut :
-* Consulter les derniers ragôts
-* L'équipe en charge du projet
-* Contacter l'équipe
-
-
 ### Commentaires
 
-Rien à ajouter :D
+Ma version étant mauvaise, j'ai repris cette correction officialisé par THP pour me permette de faire la suite du Gossip Project
 
 **Merci d'avance pour la correction :)**
