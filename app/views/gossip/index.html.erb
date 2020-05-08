@@ -1,11 +1,10 @@
 <h1>Gossip n°<%=@id%></h1>
-<p>Son titre : <%=Gossip.all[@id -1].title%> </br>
-Son contenu : <%=Gossip.all[@id -1].content%> </br>
-Créé le : <%=Gossip.all[@id -1].created_at.strftime("%d of %B, %Y") %> </br></br>
+<p>Son titre : <%=Gossip.find(@id).title%> </br>
+Son contenu : <%=Gossip.find(@id).content%> </br>
+Créé le : <%=Gossip.find(@id).created_at.strftime("%d of %B, %Y") %> </br></br>
 
-Son auteur est : <%=Gossip.all[@id -1].user.first_name%> <%=Gossip.all[@id -1].user.last_name%> </br></br>
-Tu veux en savoir plus sur lui ??? Et bah cliques ici :</br>
-<%= link_to "Lien vers l'auteur", user_description_path(Gossip.all[@id -1].user.id) %><br/>
+Son auteur est : <%=Gossip.find(@id).user.first_name%> <%=Gossip.find(@id).user.last_name%> </br></br>
+
 <%= link_to "Modifier le gossip", edit_gossip_path(@id) %><br />
 <%= link_to "Supprimer le gossip", gossip_path(@id), method: :delete %>
 </p>

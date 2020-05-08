@@ -1,0 +1,22 @@
+<h2>S'enregistrer</h2>
+<%= form_tag action: 'new', method: "post" do %>
+
+      <%= label_tag 'Prénom' %>
+      <%= text_field_tag 'firstname' %>
+      <br /> <br />
+
+      <%= label_tag 'Nom' %>
+      <%= text_field_tag 'name' %>
+      <br /> <br />
+
+      <%= label_tag 'Email' %>
+      <%= text_field_tag 'email' %>
+      <br /> <br />
+
+      <%= label_tag 'Mot de passe' %>
+      <%= text_field_tag 'password' %>
+      <br /> <br />
+
+      <%= submit_tag "Se créer un compte" %>
+
+<% end %>

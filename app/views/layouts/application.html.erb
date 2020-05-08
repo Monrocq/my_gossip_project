@@ -27,6 +27,11 @@
   </head>
 
   <body>
+    <% if current_user %>
+      <h2>Bienvenue <%= User.find_by(id: session[:user_id]).first_name %> !</h2><br/><%= link_to "Se déconnecter", sessions_logout_path, method: :delete %>
+    <% else %>
+      <%= link_to "Se connecter", sessions_login_path %> / <%= link_to "S'enregistrer", sessions_signin_path %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

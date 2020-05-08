@@ -10,4 +10,10 @@ Rails.application.routes.draw do
   get '/gossips/new', to: 'new#index'
   post '/gossips/create', to: 'new#create'
   resources :gossip
+  #delete '/sessions/logout', to: 'sessions#destroy'
+  get '/sessions/login', to: 'sessions#login'
+  get '/sessions/signin', to: 'sessions#signin'
+  post '/sessions/new', to: 'sessions#new'
+  delete '/sessions/logout', to: 'sessions#destroy'
+  post '/sessions/create', to: 'sessions#create'
 end

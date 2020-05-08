@@ -1,6 +1,7 @@
 class GossipController < ApplicationController
   def index
     @id = params[:id].to_i
+    puts params[:id]
   end
 
   def edit
