@@ -1,4 +1,6 @@
 class GossipController < ApplicationController
+  before_action :authenticate_good_user, only: [:edit, :update, :destroy]
+  
   def index
     @id = params[:id].to_i
     puts params[:id]
@@ -19,5 +21,14 @@ class GossipController < ApplicationController
     @post = Gossip.find(params[:id])
     @post.destroy
     redirect_to '/'
+  end
+
+  def authenticate_good_user
+    puts params[:id]
+    puts session[:user_id]
+    unless params[:id] == session[:user_id]
+      flash[:danger] = "Please log in."
+      redirect_to '/'
+    end
   end
 end
